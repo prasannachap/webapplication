@@ -1,0 +1,21 @@
+<mat-card style="width: 100%; height: 100%;">
+    <mat-toolbar class="toolbar">
+        <p>Description Of Products</p>
+        <mat-icon [mat-dialog-close]="true" ng-hover class="closeIcon">close</mat-icon>
+    </mat-toolbar>
+    <div style="display: flex; flex-direction: row;">
+        <img [src]="singleProduct?.img_source" style="height: 300px; width: 250px; padding: 20px;">
+        <p>{{singleProduct?.desc}}</p>
+    </div>
+
+
+    <mat-card-actions style="height: 20px; flex-direction: row-reverse;">
+        <button style="background-color: skyblue; border:0px;  width: 180px; height: 40px;">
+            Buy Now
+        </button>
+        &nbsp;
+        <button style="background-color: orangered; border:0px; width: 180px; height: 40px; cursor: pointer;"
+            (click)="addToCart(singleProduct )"> Add
+            To Cart</button>
+    </mat-card-actions>
+</mat-card>

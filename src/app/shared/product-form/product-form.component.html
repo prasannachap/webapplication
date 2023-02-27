@@ -1,0 +1,27 @@
+&nbsp;
+<form [formGroup]="productForm" class="form">
+    <div style="display: flex; flex-direction: row; align-items: center;  ">
+        <h3 style="margin-left: 15px;">Product Name:</h3>
+        <mat-form-field appearance="outline" style="margin-top: 10px; width: 60%; ">
+            <input matInput formControlName="prodName">
+        </mat-form-field>
+    </div>
+    <div style="display: flex; flex-direction: row;  align-items: center;">
+        <h3 style="margin-left: 15px;">Price:</h3>
+        <mat-form-field appearance="outline" style="margin-top: 10px; width: 60%; margin-left: 75px ;">
+            <input matInput formControlName="price" type="number">
+        </mat-form-field>
+    </div>
+    <div style="display: flex; flex-direction: row;  align-items: center;">
+        <h3 style="margin-left: 15px;">Quantity:</h3>
+        <mat-form-field style="margin-top: 10px;     width: 60%; margin-left: 45px ;" appearance="outline">
+            <input matInput formControlName="quantity" type="number">
+        </mat-form-field>
+    </div>
+    <div style="display: flex; flex-direction: row;  align-items: center;">
+        <h3 style="margin-left: 15px;">Description:</h3>
+        <mat-form-field style="margin-top: 10px;  width: 60%; margin-left: 25px ;" appearance="outline">
+            <textarea matInput formControlName="desc"></textarea>
+        </mat-form-field>
+    </div>
+</form>

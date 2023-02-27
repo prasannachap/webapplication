@@ -1,0 +1,18 @@
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  min-height: 400px;
+}
+
+.closeIcon {
+  margin-right: 10px;
+}
+
+.closeIcon:hover {
+  color: red;
+  cursor: pointer;
+}

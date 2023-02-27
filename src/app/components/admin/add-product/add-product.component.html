@@ -1,0 +1,15 @@
+<mat-card>
+    <mat-toolbar style="width: 100%; height: 35px;">
+        <h1 class="example-spacer">Add Product</h1>
+        <mat-icon [mat-dialog-close]="true" ng-hover class="close">close</mat-icon>
+    </mat-toolbar>
+
+    &nbsp;
+    <ng-container [formGroup]="form">
+        <app-product-form formGroupName="productForm"></app-product-form>
+    </ng-container>
+
+    <mat-card-actions style="display: flex; justify-content: end;">
+        <button mat-flat-button (click)="addProd()"> submit</button>
+    </mat-card-actions>
+</mat-card>

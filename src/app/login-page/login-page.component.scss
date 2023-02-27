@@ -1,0 +1,13 @@
+.card {
+  width: 950px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form {
+  display: flex;
+  align-content: space-between;
+  min-height: 400px;
+}

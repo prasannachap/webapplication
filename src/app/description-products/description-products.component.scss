@@ -1,0 +1,15 @@
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px !important;
+  height: 50px;
+}
+
+.closeIcon {
+  margin-right: 10px;
+}
+
+.closeIcon:hover {
+  color: red;
+  cursor: pointer;
+}

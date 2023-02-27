@@ -1,0 +1,13 @@
+<div class="container">
+    <app-admin-dashboard></app-admin-dashboard>
+
+    <mat-drawer-container class="example-container">
+        <mat-drawer mode="side" opened style="width: 300px;">
+            <app-side-bar style="width: 100%; padding: 0px !important;"></app-side-bar>
+        </mat-drawer>
+        <mat-drawer-content>
+            <!-- <mat-spinner *ngIf="loading" class="loading"></mat-spinner> -->
+            <router-outlet></router-outlet>
+        </mat-drawer-content>
+    </mat-drawer-container>
+</div>

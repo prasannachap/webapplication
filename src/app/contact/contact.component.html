@@ -1,0 +1,94 @@
+<div style="height: 470px;">
+    <mat-card class="contact-card">
+        <form [formGroup]="contactForm">
+            <div style="display: flex; flex-direction: row;" class="width">
+                <mat-form-field style="width: 50%;">
+                    <mat-label>First Name</mat-label>
+                    <input matInput formControlName="firstName">
+                </mat-form-field>
+                &nbsp;
+                <mat-form-field style="width: 50%;">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput formControlName="lastName">
+                </mat-form-field>
+            </div>
+            <mat-form-field class="width">
+                <mat-label>Address</mat-label>
+                <input matInput formControlName="address">
+            </mat-form-field>
+            <mat-form-field class="width">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email">
+            </mat-form-field>
+            <div formArrayName="mobiles">
+                <div *ngFor="let mob of mobiles.controls; let i = index">
+                    <mat-form-field class="width">
+                        <button matSuffix style="border: 0px; cursor: pointer;" (click)="addPhone()">
+                            <mat-icon> add</mat-icon>
+                        </button>
+                        <button matSuffix style="border: 0px; cursor: pointer;" (click)="deletePhone(i)">
+                            <mat-icon> delete</mat-icon>
+                        </button>
+                        <mat-label>Phone No {{i + 1}}</mat-label>
+                        <input matInput [formControlName]="i">
+                    </mat-form-field>
+
+                </div>
+            </div>
+        </form>
+        <mat-card-actions style="flex-direction: row-reverse;">
+            <button mat-raised-button color="primary" (click)="submit()"
+                style="display: flex; flex-direction: row-reverse;">
+                Submit
+            </button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+<div style="width: 60%; margin-left: 17%;">
+    <table mat-table [dataSource]="tableData" style="overflow-x: hidden;">
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> ID </th>
+            <td mat-cell *matCellDef="let contact; index as i"> {{i + 1}} </td>
+        </ng-container>
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Full Name </th>
+            <td mat-cell *matCellDef="let contact"> {{contact.firstName}} {{contact.lastName}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="address">
+            <th mat-header-cell *matHeaderCellDef> Address </th>
+            <td mat-cell *matCellDef="let contact"> {{contact.address}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef> Email </th>
+            <td mat-cell *matCellDef="let contact"> {{contact.email}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="phone">
+            <th mat-header-cell *matHeaderCellDef>Phone</th>
+            <td mat-cell *matCellDef="let element">
+                <ul>
+                    <li *ngFor="let mobile of element.mobiles">{{ mobile }}</li>
+                </ul>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef>Action</th>
+            <td mat-cell *matCellDef="let contact; index as i">
+                <div style="display: flex; flex-direction: row;">
+                    <button mat-menu-item style="border: 0px; background: white ;" (click)="patchValue(i)">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                    <button mat-menu-item (click)="deleteContact(contact.id, $event)"
+                        style="border: 0px; background: white; cursor: pointer;">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </div>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>

@@ -1,0 +1,75 @@
+.card-hover {
+  width: 250px;
+  height: 390px;
+  display: grid;
+  cursor: pointer;
+}
+
+.image {
+  width: 250px;
+  height: 230px;
+}
+
+.display {
+  width: 20%;
+  // margin: 10px;
+  display: inline-block;
+}
+
+.images {
+  margin: 10px;
+  padding: 10px;
+}
+
+@media screen and (max-width: 850px) {
+  .display {
+    flex: 100%;
+    width: 33%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .display {
+    flex: 100%;
+    width: 75%;
+  }
+}
+@media screen and (min-width: 850px) {
+  .display {
+    flex: 100%;
+    width: 20%;
+  }
+}
+
+.hover {
+  border: 0.1px salmon rgba(0, 0, 0, 0.8);
+}
+.hover:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
+
+.description {
+  width: 235px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.like {
+  text-decoration: solid;
+}
+
+.search-box {
+  height: 35px;
+  margin-bottom: 0.75em;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.search-display {
+  display: flex;
+  align-items: flex-end;
+  align-content: center;
+  height: 40px;
+}

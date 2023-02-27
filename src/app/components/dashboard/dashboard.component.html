@@ -1,0 +1,39 @@
+<mat-toolbar class="dashboard-toolbar">
+    <a aria-label="Example icon-button with menu icon" style="cursor:pointer">
+        <img class="app-logo" src="assets/logo.png">
+    </a>
+    <span class="example-spacer"></span>
+    <button mat-icon-button style="margin-right: 15%;">
+        <mat-icon style="color:cyan ">headphones</mat-icon>
+        <span style="font-size: 17px; text-align: center;vertical-align: text-top; margin: 5px;">support</span>
+    </button>
+    <button mat-icon-button class="example-icon" routerLink="/home/myCart">
+        <mat-icon>contacts</mat-icon>
+    </button>
+    <button mat-icon-button>
+        <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="/admin">
+            <mat-icon>settings</mat-icon>
+            <span>Go To Admin</span>
+        </button>
+        <button mat-menu-item (click)="signOut()">
+            <mat-icon>logout</mat-icon>
+            <span>logout</span>
+        </button>
+    </mat-menu>
+</mat-toolbar>
+&nbsp;
+<div>
+    <div class="men-women">
+        <button class="button-design" style="  padding-left: 40px;" routerLink="/home/men">men</button>&nbsp;
+        <button class="button-design" routerLink="/home/women">women</button>
+    </div>
+    <hr style="width: 97%;">
+</div>
+
+<app-body></app-body>

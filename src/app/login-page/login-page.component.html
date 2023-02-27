@@ -1,0 +1,39 @@
+<mat-spinner *ngIf="loading" class="loading"></mat-spinner>
+<mat-card class="card">
+    <mat-toolbar style="width: 100%; height: 40px; background-color: aliceblue;">
+        Webb Application
+    </mat-toolbar>
+    <span style="margin-top: 35px;"></span>
+    <form class="form" [formGroup]="userForm">
+        <img src="../../assets/img_311846.png" style="width: 250px; height: 250px; padding-left: 10px;">
+        <div style="display: flex; flex-direction: column; margin-left: 150px;">
+            <mat-form-field appearance="outline">
+                <mat-label>Username</mat-label>
+                <input matInput formControlName="userName">
+            </mat-form-field>
+            <span *ngIf="userForm.controls['userName'].hasError('required') && (userForm.controls['userName'].touched)"
+                style="color: red;">Username is required </span>
+            <span style="margin-top: 35px;"></span>
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input matInput formControlName="passWord" type="password">
+            </mat-form-field>
+            <div
+                *ngIf="userForm.controls['passWord'].invalid && (userForm.controls['passWord'].dirty || userForm.controls['passWord'].touched)">
+                <div *ngIf="userForm.controls['passWord'].hasError('invalidPassword')" style="color: red;">Password must
+                    be at least 8
+                    characters
+                    and contain
+                    at least one letter and<br> one number and one symbol.</div>
+            </div>
+            <span style="margin-top: 35px;"></span>
+            <div style="display: flex; align-content: space-between; align-items: baseline;">
+                <mat-checkbox style="margin-right: 304px;" formControlName="rememberMe">Remember me</mat-checkbox>
+                <a style="cursor: pointer; margin-right: 10px;" (click)="register()"> Register</a>
+            </div>
+            <span style="margin-top: 35px;"></span>
+
+            <button mat-raised-button style="width: 100%;" color="primary" (click)="logInn()"> Submit </button>
+        </div>
+    </form>
+</mat-card>

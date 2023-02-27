@@ -1,0 +1,42 @@
+<mat-card class="card">
+    <mat-toolbar style="width: 100%; height: 40px; background-color: aliceblue; justify-content: space-between;">
+        <div> Webb Adivplication</div>
+        <mat-icon [mat-dialog-close]="true" ng-hover class="closeIcon">close</mat-icon>
+    </mat-toolbar>
+    &nbsp;
+    <form class="form" [formGroup]="registerForm">
+        <!-- <img src="../../assets/img_311846.png" style="width: 250px; height: 250px; padding-left: 10px;"> -->
+        <div style="display: flex; flex-direction: column; ">
+            <mat-form-field appearance="outline" style="width: 500px;">
+                <mat-label>First Name</mat-label>
+                <input matInput formControlName="firstName">
+            </mat-form-field>
+            &nbsp;
+            <mat-form-field appearance="outline" style="width: 500px;">
+                <mat-label>Last Name</mat-label>
+                <input matInput formControlName="lastName">
+            </mat-form-field>
+            &nbsp;
+            <mat-form-field appearance="outline" style="width: 500px;">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email">
+            </mat-form-field>
+            &nbsp;
+            <mat-form-field appearance="outline" style="width: 500px;">
+                <mat-label>Password</mat-label>
+                <input matInput formControlName="passWord" type="password">
+            </mat-form-field>
+            <div
+                *ngIf="registerForm.controls['passWord'].invalid && (registerForm.controls['passWord'].dirty || registerForm.controls['passWord'].touched)">
+                <div *ngIf="registerForm.controls['passWord'].hasError('invalidPassword')" style="color: red;">Password
+                    must
+                    be at least 8
+                    characters
+                    and contain
+                    at least one letter and <br>one number and one symbol.</div>
+            </div>
+            &nbsp;
+            <button mat-raised-button style="width: 100%;" color="primary" (click)="register()"> Submit </button>
+        </div>
+    </form>
+</mat-card>

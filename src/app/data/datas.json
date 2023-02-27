@@ -1,0 +1,79 @@
+[
+  {
+    "id": 1,
+    "desc": "A shoe is an item of footwear intended to protect and comfort the human foot. They are often worn with a sock.",
+    "img_source": "assets/item1.jpg",
+    "gender": "male",
+    "liked": false
+  },
+  {
+    "id": 2,
+    "desc": "description 2 ",
+    "img_source": "assets/item2.jpg",
+    "liked": false,
+    "gender": "women"
+  },
+  {
+    "id": 3,
+    "desc": "description 2 ",
+    "img_source": "assets/item3.jpg",
+    "liked": false,
+    "gender": "male"
+  },
+  {
+    "id": 4,
+    "desc": "description 2 ",
+    "img_source": "assets/item4.jpg",
+    "liked": false,
+    "gender": "male"
+  },
+  {
+    "id": 5,
+    "desc": "description 2 ",
+    "img_source": "assets/item5.jpg",
+    "liked": false,
+    "gender": "male"
+  },
+  {
+    "id": 6,
+    "desc": "description 2 ",
+    "img_source": "assets/item6.jpg",
+    "liked": false,
+    "gender": "women"
+  },
+  {
+    "id": 7,
+    "desc": "description 2 ",
+    "img_source": "assets/item7.jpg",
+    "liked": false,
+    "gender": "women"
+  },
+  {
+    "id": 8,
+    "desc": "description 2 ",
+    "img_source": "assets/item8.jpg",
+    "liked": true,
+    "gender": "women"
+  },
+  {
+    "id": 9,
+    "desc": "description 2 ",
+    "img_source": "assets/item9.jpg",
+    "liked": true,
+    "gender": "women"
+  },
+  {
+    "id": 10,
+    "desc": "description 2 ",
+    "img_source": "assets/item10.jpg",
+    "liked": true,
+    "gender": "women"
+  },
+  {
+    "id": 11,
+    "desc": "description 2 ",
+    "img_source": "assets/item2.jpg",
+    "liked": true,
+    "gender": "women"
+  }
+]

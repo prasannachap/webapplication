@@ -1,0 +1,35 @@
+.card-hover {
+  width: 250px;
+  height: 390px;
+  display: grid;
+  cursor: pointer;
+}
+
+.image {
+  float: left;
+  width: 250px;
+  height: 230px;
+  object-fit: cover;
+}
+.images {
+  margin-left: 57px;
+  width: 250px;
+  height: 390px;
+  cursor: pointer;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: auto auto auto auto auto;
+}
+.hover {
+  border: 0.1px salmon rgba(0, 0, 0, 0.8);
+}
+.hover:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
+
+.description {
+  width: 235px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
